@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Image Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+IN:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="project-header">Dynamic Image Slider</h1>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="Images/tokyo.jpg.crdownload" alt="Tokyo" />
+          <div class="text-overlay">
+            <h1 class="main-text">Tokyo</h1>
+            <p class="description">
+              "A breathtaking view of Tokyo's skyline, with vibrant lights
+              reflecting off the towering skyscrapers, creating a mesmerizing
+              urban glow."
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/I-5.jpg" alt="Image 2" />
+          <div class="text-overlay">
+            <h1 class="main-text">Eiffel Tower</h1>
+            <p class="description">
+              The Eiffel Tower stands majestically against a golden sunset sky,
+              casting long shadows over the city of Paris. Its iron lattice
+              glows softly as the sun dips below the horizon, creating a serene
+              and timeless moment.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/Norway(3).jpg" alt="Image 3" />
+          <div class="text-overlay">
+            <h1 class="main-text">Norway</h1>
+            <p class="description">
+              The quiet beauty of snow-capped mountains is illuminated by a
+              soft, moonlit glow, while the serene waters reflect the stars,
+              creating a peaceful and awe-inspiring atmosphere."
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/Iceland.jpg" alt="Image 4" />
+          <div class="text-overlay">
+            <h1 class="main-text">Iceland</h1>
+            <p class="description">
+              Iceland is a land of contrasts, where towering waterfalls cascade
+              into lush valleys, and volcanic landscapes meet icy glaciers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+
+      <!-- Thumbnail Navigation -->
+      <div class="thumbnails">
+        <img
+          src="Images/tokyo.jpg.crdownload"
+          alt="Thumbnail 1"
+          class="thumbnail"
+          onclick="goToSlide(0)"
+        />
+        <img
+          src="Images/I-5.jpg"
+          alt="Thumbnail 2"
+          class="thumbnail"
+          onclick="goToSlide(1)"
+        />
+        <img
+          src="Images/Norway(3).jpg"
+          alt="Thumbnail 3"
+          class="thumbnail"
+          onclick="goToSlide(2)"
+        />
+        <img
+          src="Images/Iceland.jpg"
+          alt="Thumbnail 4"
+          class="thumbnail"
+          onclick="goToSlide(3)"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

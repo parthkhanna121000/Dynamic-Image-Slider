@@ -1,0 +1,163 @@
+/* Project Header */
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+/* Updated h1 styling for the title */
+.project-header {
+  font-size: 4vw; /* Responsive font size based on the viewport */
+  font-weight: bold;
+  color: #000000;
+  font-family: "Playwrite IN", serif;
+  margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 768px) {
+  .project-header {
+    font-size: 8vw; /* Larger text on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header {
+    font-size: 10vw; /* Even larger text for mobile */
+  }
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Text Overlay */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.main-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 30px;
+  font-family: "Playwrite IN", serif;
+  color: rgba(255, 255, 255, 0.877);
+}
+
+
+.description {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px 20px;
+  border-radius: 14px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+/* Thumbnail Navigation */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  width: 300px;
+  height: 190px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 1px solid black;
+  border-radius: 9px;
+}
+
+.thumbnail:hover {
+  transform: scale(1.2);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90%;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 40px;
+  }
+}
+/* Zoom on hover for slide images */
+.slide img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
